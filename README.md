@@ -1,6 +1,6 @@
-/////////////////////////////
-// CODING CHALLENGE- from The Complete JavaScript Course 2020: Build Real Projects! by Jonas Schmedtmann
-/////////////////////////////
+My take on the coding challenge #7 from The Complete JavaScript Course 2020: Build Real Projects! by Jonas Schmedtmann
+
+## CODING CHALLENGE #7- from The Complete JavaScript Course 2020: Build Real Projects! by Jonas Schmedtmann
 
 --- Let's build a fun quiz game in the console! ---
 
