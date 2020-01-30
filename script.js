@@ -43,6 +43,7 @@
 
     // 5. Use the 'prompt' function to ask the user for the correct answer.
     userInput = prompt(questions[questionNum].question);
+    console.log("the user chose: " + userInput);
     userAnswer(userInput);
   }
 
@@ -54,17 +55,13 @@
       console.log("****************************");
       displayScore(score);
       nextQuestion(); // 8. After you display the result, display the next random question, so that the game never ends
-    } else {
-      if (input === "exit" || input === "Exit" || input === "Close" || input === "close" || input === null) {
-        console.log("Player has ended the game!");
-        return;
-      }
-
-      if (parseFloat(input) >= questions[random].answers.length || parseFloat(input) < 0) {
-        console.log("ERROR: Invalid selection!");
-        currentQuestion(random);
-      }
-
+    } else if (parseFloat(input) >= questions[random].answers.length || parseFloat(input) < 0) {
+      console.log("ERROR: Invalid selection!");
+      currentQuestion(random);
+    } else if (input === "exit" || input === "Exit" || input === "Close" || input === "close" || input === null) {
+      console.log("Player has ended the game!");
+      return;
+    } else if (parseFloat(input) !== questions[random].correctAnswer) {
       console.log("#####Wrong answer. Try again!#####");
       currentQuestion(random);
     }
